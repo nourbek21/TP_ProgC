@@ -1,26 +1,61 @@
 #include <stdio.h>
 
-int main(void)
-{
-    int num1 = 10, num2 = 3;
-    char op = '+';
+int main() {
+    int num1 = 12;
+    int num2 = 5;
+    char op = '*'; // changer le caractère pour tester différentes opérations
+
+    printf("num1 = %d, num2 = %d, opérateur = %c\n", num1, num2, op);
 
     switch (op) {
-        case '+': printf("%d + %d = %d\n", num1, num2, num1 + num2); break;
-        case '-': printf("%d - %d = %d\n", num1, num2, num1 - num2); break;
-        case '': printf("%d %d = %d\n", num1, num2, num1 * num2); break;
-        case '/': if (num2) printf("%d / %d = %d\n", num1, num2, num1 / num2);
-                  else printf("Division par zéro !\n"); break;
-        case '%': if (num2) printf("%d %% %d = %d\n", num1, num2, num1 % num2);
-                  else printf("Modulo par zéro !\n"); break;
-        case '&': printf("%d & %d = %d\n", num1, num2, num1 & num2); break;
-        case '|': printf("%d | %d = %d\n", num1, num2, num1 | num2); break;
-        case '~': printf("~%d = %d, ~%d = %d\n", num1, ~num1, num2, ~num2); break;
-        default:  printf("Opérateur inconnu !\n");
+        case '+':
+            printf("Résultat : %d\n", num1 + num2);
+            break;
+
+        case '-':
+            printf("Résultat : %d\n", num1 - num2);
+            break;
+
+        case '*':
+            printf("Résultat : %d\n", num1 * num2);
+            break;
+
+        case '/':
+            if (num2 != 0)
+                printf("Résultat : %d\n", num1 / num2);
+            else
+                printf("Erreur : division par zéro !\n");
+            break;
+
+        case '%':
+            if (num2 != 0)
+                printf("Résultat : %d\n", num1 % num2);
+            else
+                printf("Erreur : modulo par zéro !\n");
+            break;
+
+        case '&':
+            printf("Résultat (ET binaire) : %d\n", num1 & num2);
+            break;
+
+        case '|':
+            printf("Résultat (OU binaire) : %d\n", num1 | num2);
+            break;
+
+        case '~':
+            printf("Résultat (~num1) : %d\n", ~num1);
+            printf("Résultat (~num2) : %d\n", ~num2);
+            break;
+
+        default:
+            printf("Erreur : opérateur inconnu '%c'\n", op);
+            break;
     }
 
     return 0;
 }
+
+
 
 
 
