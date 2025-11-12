@@ -1,28 +1,28 @@
 #include <stdio.h>
-#include <string.h>
 
-int main() {
-    printf("Tailles des types de base en octets :\n\n");
+int main(void)
+{
+    printf("Taille des types de base (en octets) :\n\n");
 
-    printf("char : %zu octets\n", sizeof(char));
-    printf("signed char : %zu octets\n", sizeof(signed char));
-    printf("unsigned char : %zu octets\n", sizeof(unsigned char));
+    printf("char / signed char / unsigned char : %zu / %zu / %zu\n",
+           sizeof(char), sizeof(signed char), sizeof(unsigned char));
 
-    printf("short : %zu octets\n", sizeof(short));
-    printf("unsigned short : %zu octets\n", sizeof(unsigned short));
+    printf("short / unsigned short : %zu / %zu\n",
+           sizeof(short), sizeof(unsigned short));
 
-    printf("int : %zu octets\n", sizeof(int));
-    printf("unsigned int : %zu octets\n", sizeof(unsigned int));
+    printf("int / unsigned int : %zu / %zu\n",
+           sizeof(int), sizeof(unsigned int));
 
-    printf("long int : %zu octets\n", sizeof(long int));
-    printf("unsigned long int : %zu octets\n", sizeof(unsigned long int));
+    printf("long int / unsigned long int : %zu / %zu\n",
+           sizeof(long int), sizeof(unsigned long int));
 
-    printf("long long int : %zu octets\n", sizeof(long long int));
-    printf("unsigned long long int : %zu octets\n", sizeof(unsigned long long int));
+    printf("long long int / unsigned long long int : %zu / %zu\n",
+           sizeof(long long int), sizeof(unsigned long long int));
 
-    printf("float : %zu octets\n", sizeof(float));
-    printf("double : %zu octets\n", sizeof(double));
-    printf("long double : %zu octets\n", sizeof(long double));
+    printf("float : %zu\n", sizeof(float));
+    printf("double : %zu\n", sizeof(double));
+    printf("long double : %zu\n", sizeof(long double));
 
     return 0;
 }
+
